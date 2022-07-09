@@ -7,10 +7,10 @@ public class FlipCoin {
 		int flip = 0 , head = 0, tail = 0;
 		
 		System.out.println("Enter the number of time you want to flip the coin");
-		float flipNum = sc.nextInt();
+		int flipNum = sc.nextInt();
 
 		while (flip < flipNum) {
-			double flipResult = Math.floor(Math.random() * 10) % 2;
+			int flipResult = (int) (Math.random() * 2);
 			flip ++;
 
 		if (flipResult == 1)
@@ -20,8 +20,8 @@ public class FlipCoin {
 		}
 		sc.close();
 
-		float perHead = (head * 100 / flipNum);
-		float perTail = (tail * 100 / flipNum);
+		int perHead = (head * 100 / flipNum);
+		int perTail = (tail * 100 / flipNum);
 
 		System.out.println("Number of Head is : "+head);
 		System.out.println("Number of Tail is : "+tail);
